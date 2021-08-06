@@ -1,0 +1,17 @@
+{
+    "name": "node-red-multioutput",
+    "version": "0.0.1",
+    "description": "project for understanding multioutput of a node",
+    "dependencies": {},
+    "keywords": [
+        "node-red",
+        "node",
+        "output",
+        "multioutput"
+    ],
+    "node-red": {
+        "nodes": {
+            "multi-o": "multi-o/multi-o.js"
+        }
+    }
+}

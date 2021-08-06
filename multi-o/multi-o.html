@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('multi-o', {
+        category: 'function',
+        color: '#FFF0F0',
+        defaults: {
+            name: { value: "" },
+            outputs: { value: 1 }
+        },
+        inputs: 1,
+        icon: "font-awesome/fa-cogs",
+        label: function () {
+            return this.name || "multi-o";
+        },
+        oneditprepare: function () {
+            var node = this;
+            node.outputs = $("node-input-outputs");
+        },
+        oneditsave: function () {
+            var node = this;
+            node.outputs = $("node-input-outputs");
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="multi-o">
+    <p>...</p>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-outputs"><i class="fa fa-random"></i> Outputs</label>
+        <input id="node-input-outputs" type="number" "width: 60px;" value="1">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="multi-o">
+    <p>choose the number of outputs.</p>
+</script>
